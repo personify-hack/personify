@@ -1,5 +1,8 @@
 :root {
-  --primary: rgb(50, 44, 44);
-
+  --primary_color: #73c8a9;
+  --secondary_color: #373b44;
   --white: #fff;
+  --test_color1: rgba(213, 22, 159, 0.738);
+  --test_color2: rgb(26, 164, 153);
+  --test_color3: rgba(195, 236, 61, 0.64);
 }

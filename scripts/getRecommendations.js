@@ -1,6 +1,7 @@
 async function getRecommendations() {
+  const formData = getHomeValues();
   const artist_ids = await fetchArtistIds();
-  const recommended = await fetchRecommendedApi(artist_ids);
+  const recommended = await fetchRecommendedApi(artist_ids, formData);
   console.log(recommended);
 
   const playlist = await createPlaylist();

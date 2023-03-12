@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/home.css" />
 
     <!-- Scripts -->
-
+    <script type="text/javascript" src="../scripts/home.js"></script>
     <script
       type="text/javascript"
       src="../scripts/fetchAccessToken.js"
@@ -27,24 +27,46 @@
   </head>
 
   <body>
-    <div style="width: 500px">
-      <div style="float: left; width: 200px">
-        <input type="range" value="25" />
-      </div>
-      <div style="float: left; width: 300px">
-        <input
-          type="text"
-          id="artistsInput"
-          placeholder="Enter your favorite artists separated by commas"
-        />
-      </div>
-      <div style="float: left; width: 100px">
-        <label for="genre">Genre:</label> <input type="text" id="genre" />
-      </div>
-      <br style="clear: left" />
+    <!-- <div style="float: left; width: 300px">
+      <input
+        type="text"
+        id="artistsInput"
+        placeholder="Enter your favorite artists separated by commas"
+      />
+    </div> -->
+
+    <label for="mood">Enter a number between 0 and 100:</label>
+    <input type="text" id="mood" name="mood" pattern="[0-9]+" min="0" max="100" required>
+    
+    
+    </div>
+    <div>
+      <label for="genres">Select a genre:</label>
+      <select id="genres" name="genres">
+        <option value="pop">Pop</option>
+        <option value="rap">Rap</option>
+        <option value="rock">Rock</option>
+        <option value="hip-hop">Hip Hop</option>
+        <option value="jazz">Jazz</option>
+        <option value="country">country</option>
+        <option value="metal">metal</option>
+        <option value="R&B">R&B</option>
+        <option value="edm">EDM</option>
+      </select>
+    </div>
+    <div>
+      <label for="artist">Enter an artist:</label>
+      <input
+        type="text"
+        id="artistsInput"
+        name="artist"
+        placeholder="Enter your favorite artists separated by commas"
+      />
     </div>
 
-    <button onclick="getRecommendations()">Get Recommendations</button>
+    <button id="submit-btn" onclick="getRecommendations()">
+      Get Recommendations
+    </button>
     <div>
       <div id="playlist-container"></div>
     </div>

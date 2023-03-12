@@ -2,15 +2,34 @@
   <head>
     <title>Personify</title>
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles/vars.css" />
     <link rel="stylesheet" href="../styles/home.css" />
+
+    <!-- Scripts -->
+
+    <script
+      type="text/javascript"
+      src="../scripts/fetchArtistSeeds.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../scripts/getRecommendations.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../scripts/fetchRecommendedAPI.js"
+    ></script>
   </head>
 
   <body>
-    <script type="text/javascript" src="../scripts/home.js"></script>
-
-    <label for="artist">Artist:</label>
-    <input type="text" id="artist" />
+    <input
+      type="text"
+      id="artistsInput"
+      placeholder="Enter your favorite artists separated by commas"
+    />
 
     <label for="genre">Genre:</label>
     <input type="text" id="genre" />

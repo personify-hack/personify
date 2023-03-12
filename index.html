@@ -28,13 +28,30 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
       </div>
-      <h1><img src="images/personify.png" height="146.75" width="245" /></h1>
+      <h1><img src="images/personify.png" height="220.125" width="367.5" /></h1>
       <div style="text-align: center">
-        <button onclick="document.location='pages/home.html'"></button>
-        <img src="images/newplaything.png" />
+        <!-- <button onclick="document.location='pages/home.html'"></button> -->
+        <img
+          src="images/newplaything.png"
+          height="105px"
+          width="110px"
+          onclick="document.location='pages/home.html'"
+          onmouseover="typeWriter()"
+        />
+        <br />
+        <br />
+        <p
+          id="demo"
+          style="
+            color: white;
+            font-family: Montserrat;
+            font-size: x-large;
+            font-weight: bold;
+            font-style: italic;
+          "
+        ></p>
       </div>
     </div>
-    <h1><img src="images/personify.png" height="146.75" width="245" /></h1>
   </body>
 
   <!--All the script stuff-->
@@ -48,5 +65,17 @@
         $("body").addClass("loaded");
       }, random);
     });
+
+    var i = 0;
+    var txt = "Put your music taste and mood on the same wavelength";
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
   </script>
 </html>

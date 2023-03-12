@@ -8,6 +8,11 @@
 
     <!-- Scripts -->
 
+    <script
+      type="text/javascript"
+      src="../scripts/fetchAccessToken.js"
+    ></script>
+
     <script type="text/javascript" src="../scripts/addSongs.js"></script>
     <script type="text/javascript" src="../scripts/fetchArtistIds.js"></script>
     <script
@@ -22,27 +27,31 @@
   </head>
 
   <body>
+    <div style="align-self: auto">
+      <input type="range" value="25" />
+    </div>
     <input
       type="text"
       id="artistsInput"
       placeholder="Enter your favorite artists separated by commas"
     />
+
     <label for="genre">Genre:</label>
     <input type="text" id="genre" />
-    <
     <button onclick="getRecommendations()">Get Recommendations</button>
+    <div>
+      <iframe
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/artist/55ePKKN5AOLnEue9HlY5zf?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
 
-    <iframe
-      style="border-radius: 12px"
-      src="https://open.spotify.com/embed/artist/55ePKKN5AOLnEue9HlY5zf?utm_source=generator"
-      width="100%"
-      height="352"
-      frameborder="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-    ></iframe>
-
-    <ul id="recommendations"></ul>
+      <ul id="recommendations"></ul>
+    </div>
   </body>
 </html>

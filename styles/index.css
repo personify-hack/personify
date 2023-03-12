@@ -26,7 +26,7 @@
 }
 
 body {
-  background: #000000;
+  background: linear-gradient(#d0bdf4, #e5eaf5);
   padding: 0;
   margin: 0;
 }
@@ -159,77 +159,27 @@ h1 {
   color: black;
 }
 
-/* CSS */
-.button-85 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: black;
-  background: transparent;
-  cursor: pointer;
+.gg-play-button-o {
+  box-sizing: border-box;
   position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  text-align: center;
-  width: 250px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: large;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 82px;
+  height: 82px;
+  border: 2px solid;
+  border-radius: 80px;
 }
 
-.button-85:before {
+.gg-play-button-o::before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
+  display: block;
+  box-sizing: border-box;
   position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-  text-align: center;
-  width: 250px;
-}
-
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.button-85:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: white;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px;
 }

@@ -1,6 +1,6 @@
 async function createPlaylist() {
   access_token =
-    "BQBDeCaLIcEdFU6mAbE7enpNV5QUjQugbp8K4iyznkBwo8mojQ9Xe9cqsBXCW504iePTAyKAej_oxTcCJtBvAvo9oJF4tmqDyx-aju4mhO3hOmQpp3fnuoJil_RaTJZMFKOFK6rU04RH4udhCRcpkn8VzscmQ7dpo2xZ0wm3aei342p2bXnVYWtxx26oBUI0iEu0ycpufeSFKhCRmL9p6yn9pZ9MikNK5gI3CLqT1L32aoFQv9at3lgTmx6DXksfKbtlHIujjlYjSgeunVigJ3Hx_Px7KDVqvbcPbYhs_tKBWSyxnSnv5cWcc2HrJv5BE7XXaOSmykH7Gw";
+    "BQDzExpwFsxYt3L4-R-MjLXgtLJsHlv2pb2djzRcKC6EY13qcUQ8JQ5rVu_0iW2frYtgolb8fc4oBE6vjqpBvOacjWURcbjRCPxjDxe6Drgezx_FtAWQ696g7oq1Y-XCZEgW2nmAGPpyk6cmefKFbMCdL78rZC8p9PaaC42V4-ZSXo7OdbwrZgZQ9oLgVf9bJvEz2nGZ4-ktDCvowLuRK4uF41u3sFbhIba5Ozg7JlS1h_g6R_ls-QOnsGkkPQjNOuj1P7-pUMC9Qckx_mn_FEN-py5-9YP8ymrwIof2GXkRVvomusTT97gLY8PtDbF8WzXh3fGurM5EPw";
   const response = await fetch(
     "https://api.spotify.com/v1/users/31xlojdxrz4skapenzfcqyqg5ama/playlists",
     {

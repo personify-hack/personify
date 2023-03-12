@@ -41,6 +41,6 @@ async function getPlaylistEmbed(playlistId) {
   const data = await response.json();
 
   return `
-    <iframe src="https://open.spotify.com/embed/playlist/${playlistId}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/${playlistId}" width="100%" height="87%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   `;
 }

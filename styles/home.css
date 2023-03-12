@@ -2,6 +2,8 @@ body {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  background-color: black;
+  padding: 10px;
 }
 @keyframes fadeInAnimation {
   0% {
@@ -12,84 +14,73 @@ body {
   }
 }
 
-/*Start slider styling*/
-body {
-  height: 100vh;
-  margin: 0;
-  display: flex;
+#playlist-container {
+  padding-top: 10px;
+  width: 100%;
+}
+label {
+  color: white;
 }
 
-input[type="range"] {
-  margin: auto;
-  -webkit-appearance: none;
-  position: relative;
-  overflow: hidden;
-  height: 40px;
-  width: 200px;
+#submit-btn,
+#genres,
+#mood,
+#artistsInput {
+  background: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(
+    to bottom right,
+    #e299da,
+    #c87bf1,
+    #6cd0f8,
+    #5dffcb
+  );
+  border-image-slice: 1;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 0; /* iOS */
+
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 200px;
 }
 
-::-webkit-slider-runnable-track {
-  background: #ddd;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*
- * 1. Set to 0 width and remove border for a slider without a thumb
- * 2. Shadow is negative the full width of the input and has a spread 
- *    of the width of the input.
- */
-::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px; /* 1 */
-  height: 40px;
-  background: #fff;
-  box-shadow: -200px 0 0 200px lightpink; /* 2 */
-  border: 2px solid #999; /* 1 */
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 
-::-moz-range-track {
-  height: 40px;
-  background: #ddd;
+.label {
+  text-align: center;
+  width: 100px;
 }
 
-::-moz-range-thumb {
-  background: #fff;
-  height: 40px;
-  width: 20px;
-  border: 3px solid #999;
-  border-radius: 0 !important;
-  box-shadow: -200px 0 0 200px dodgerblue;
-  box-sizing: border-box;
+.item {
+  margin-top: 10px;
+  width: 100%;
 }
 
-::-ms-fill-lower {
-  background: linear-gradient(red, blue);
+select option {
+  color: black;
 }
 
-::-ms-thumb {
-  background: #fff;
-  border: 2px solid #999;
-  height: 40px;
-  width: 20px;
-  box-sizing: border-box;
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-::-ms-ticks-after {
-  display: none;
-}
-
-::-ms-ticks-before {
-  display: none;
-}
-
-::-ms-track {
-  background: #ddd;
-  color: transparent;
-  height: 40px;
-  border: none;
-}
-
-::-ms-tooltip {
-  display: none;
+#submit-btn {
+  width: 45%;
+  margin-top: 20px;
+  margin-right: 60px;
 }

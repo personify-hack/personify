@@ -44,7 +44,7 @@ input[type="range"] {
   width: 20px; /* 1 */
   height: 40px;
   background: #fff;
-  box-shadow: -200px 0 0 200px dodgerblue; /* 2 */
+  box-shadow: -200px 0 0 200px lightpink; /* 2 */
   border: 2px solid #999; /* 1 */
 }
 
@@ -64,7 +64,7 @@ input[type="range"] {
 }
 
 ::-ms-fill-lower {
-  background: dodgerblue;
+  background: linear-gradient(red, blue);
 }
 
 ::-ms-thumb {

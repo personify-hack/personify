@@ -13,4 +13,33 @@ async function getRecommendations() {
   });
 
   const songs = await addTracksToPlaylist(playlist.id, trackURIS);
+
+  await displayPlaylist(playlist.id);
+}
+async function displayPlaylist(playlistId) {
+  try {
+    const playlistEmbed = await getPlaylistEmbed(playlistId);
+    const playlistContainer = document.getElementById("playlist-container");
+    playlistContainer.innerHTML = playlistEmbed;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function getPlaylistEmbed(playlistId) {
+  accessToken = getAccessToken();
+  const response = await fetch(
+    `https://api.spotify.com/v1/playlists/${playlistId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    }
+  );
+
+  const data = await response.json();
+
+  return `
+    <iframe src="https://open.spotify.com/embed/playlist/${playlistId}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  `;
 }

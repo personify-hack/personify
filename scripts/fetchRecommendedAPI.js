@@ -20,8 +20,9 @@ function fetchRecommendedApi(artist_ids) {
         // Get recommendations based on genre, artists, BPM, and mood
         const seed_genres = "pop";
         const target_valence = 0.6;
+        limit = 50;
 
-        const url = `https://api.spotify.com/v1/recommendations?seed_genres=${seed_genres}&seed_artists=${artist_ids}&target_valence=${target_valence}`;
+        const url = `https://api.spotify.com/v1/recommendations?seed_genres=${seed_genres}&seed_artists=${artist_ids}&target_valence=${target_valence}&limit=${limit}`;
 
         fetch(url, {
           headers: {

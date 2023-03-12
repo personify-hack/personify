@@ -26,7 +26,7 @@
 }
 
 body {
-  background: linear-gradient(#d0bdf4, #e5eaf5);
+  background: linear-gradient(rgb(197, 85, 85), #9198e5);
   padding: 0;
   margin: 0;
 }

@@ -1,44 +1,39 @@
 function getRecommendations() {
-  // Obtain access token from localStorage
-  var access_token = localStorage.getItem("spotify_access_token");
-  process.env.ID;
-  // Set up API request parameters
-  var artist = document.getElementById("artist").value;
-  var genre = document.getElementById("genre").value;
-  var limit = 10;
+  const CLIENT_ID = "13aca85cd9ab47c4bb0dde8481173e87";
+  const CLIENT_SECRET = "b90f3294ac6f4f5e8b7123bdc02d622d";
 
-  // Construct API request URL with parameters
-  var api_url =
-    "https://api.spotify.com/v1/recommendations?" +
-    "seed_artists=" +
-    encodeURIComponent(artist) +
-    "&seed_genres=" +
-    encodeURIComponent(genre) +
-    "&limit=" +
-    encodeURIComponent(limit);
+  const credentials = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
 
-  // Send GET request to API with authorization header
-  fetch(api_url, {
+  fetch("https://accounts.spotify.com/api/token", {
+    method: "POST",
     headers: {
-      Authorization: "Bearer " + access_token,
+      Authorization: `Basic ${credentials}`,
+      "Content-Type": "application/x-www-form-urlencoded",
     },
+    body: "grant_type=client_credentials",
   })
     .then((response) => response.json())
     .then((data) => {
-      // Process response data and display recommendations on page
-      var recommendations = document.getElementById("recommendations");
-      recommendations.innerHTML = "";
-      data.tracks.forEach((track) => {
-        var li = document.createElement("li");
-        li.innerText =
-          track.name +
-          " - " +
-          track.artists.map((artist) => artist.name).join(", ");
-        recommendations.appendChild(li);
-      });
+      const access_token = data.access_token;
+
+      // Get recommendations based on genre, artists, BPM, and mood
+      const seed_genres = "pop";
+      const seed_artists = "66CXWjxzNUsdJxJ2JdwvnR";
+      const target_valence = 0;
+
+      const url = `https://api.spotify.com/v1/recommendations?seed_genres=${seed_genres}&seed_artists=${seed_artists}&target_valence=${target_valence}`;
+
+      fetch(url, {
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          // Do something with the recommended tracks
+        })
+        .catch((error) => console.error(error));
     })
-    .catch((error) => {
-      console.error(error);
-      alert("Error obtaining recommendations. Please try again.");
-    });
+    .catch((error) => console.error(error));
 }

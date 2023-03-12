@@ -1,6 +1,6 @@
 function addTracksToPlaylist(playlistId, trackUris) {
   const access_token =
-    "BQDzExpwFsxYt3L4-R-MjLXgtLJsHlv2pb2djzRcKC6EY13qcUQ8JQ5rVu_0iW2frYtgolb8fc4oBE6vjqpBvOacjWURcbjRCPxjDxe6Drgezx_FtAWQ696g7oq1Y-XCZEgW2nmAGPpyk6cmefKFbMCdL78rZC8p9PaaC42V4-ZSXo7OdbwrZgZQ9oLgVf9bJvEz2nGZ4-ktDCvowLuRK4uF41u3sFbhIba5Ozg7JlS1h_g6R_ls-QOnsGkkPQjNOuj1P7-pUMC9Qckx_mn_FEN-py5-9YP8ymrwIof2GXkRVvomusTT97gLY8PtDbF8WzXh3fGurM5EPw";
+    "BQArKAIcLZkw8bMiSZB_Lu5JcE_l3IU7pK9deH2Tla5thD9tAjbSOvzT4N6JuNfj7wobeZmpOMmbtKA2BKBW5AW22kyjSN318u_dEsala19lLRLkD2_vLGaS65WMt3xVJKhMsrMrlBpGzSHfKQn5JcYybBidz04wxdWIYaTq6rG34eGJ5j2F1vpJ5Fe1XcBHlnU6AHOj738gQfQn6R415K3A2jS4Q8axA_Cb-ij5yN-lAsbOWw9cT2OXawBag9mDkCQ-83obi0O1gYydmy6M6Iwaim1QqLYFvM1ZFOBnktdgULMypZLRdiwYJq8ak5F9lOWzXXpAZINObw";
   const url = `https://api.spotify.com/v1/playlists/${playlistId}/tracks`;
   return fetch(url, {
     method: "POST",

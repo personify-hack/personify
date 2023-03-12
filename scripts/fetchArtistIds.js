@@ -1,7 +1,7 @@
 const CLIENT_ID = "13aca85cd9ab47c4bb0dde8481173e87";
 const CLIENT_SECRET = "b90f3294ac6f4f5e8b7123bdc02d622d";
 
-async function fetchArtistSeeds() {
+async function fetchArtistIds() {
   const artistsInput = document.getElementById("artistsInput");
   const artists = artistsInput.value.split(",");
   console.log(artists);

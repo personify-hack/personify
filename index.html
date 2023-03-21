@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Data-->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <title>Personify</title>
+	<head>
+		<!-- Meta Data-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<title>Personify</title>
 
-    <!-- Links -->
-    <link rel="stylesheet" href="styles/index.css" />
-    <link
-      href="https://unpkg.com/css.gg@2.0.0/icons/css/play-button-o.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+		<!-- Links -->
+		<link rel="stylesheet" href="styles/index.css" />
+		<link
+			href="https://unpkg.com/css.gg@2.0.0/icons/css/play-button-o.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
 
-  <body>
-    <div id="gradient">
-      <div id="pre-loader">
-        <div id="loader-logo"></div>
-        <div id="loader-circle"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-      </div>
-      <h1><img src="images/personify.png" height="220.125" width="367.5" /></h1>
-      <div style="text-align: center">
-        <!-- <button onclick="document.location='pages/home.html'"></button> -->
-        <img
-          src="images/PLAYBUTTON.png"
-          height="105px"
-          width="110px"
-          onclick="document.location='pages/home.html'"
-          onmouseover="typeWriter()"
-        />
-        <br />
-        <br />
-        <p
-          id="demo"
-          style="color: white; font-size: x-large; font-weight: bold"
-        ></p>
-      </div>
-    </div>
-  </body>
+	<body>
+		<div id="gradient">
+			<div id="pre-loader">
+				<div id="loader-logo"></div>
+				<div id="loader-circle"></div>
+				<div class="loader-section section-left"></div>
+				<div class="loader-section section-right"></div>
+			</div>
+			<h1><img src="images/personify.png" height="220.125" width="367.5" /></h1>
+			<div style="text-align: center">
+				<!-- <button onclick="document.location='pages/home.html'"></button> -->
+				<img
+					src="images/PLAYBUTTON.png"
+					height="105px"
+					width="110px"
+					onclick="document.location='pages/test.html'"
+					onmouseover="typeWriter()"
+				/>
+				<br />
+				<br />
+				<p
+					id="demo"
+					style="color: white; font-size: x-large; font-weight: bold"
+				></p>
+			</div>
+		</div>
+	</body>
 
-  <!--All the script stuff-->
-  <script src="scripts/scipt.js"></script>
-  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script id="rendered-js">
-    var random = Math.floor(Math.random() * 2000) + 2000;
-    $(document).ready(function () {
-      setTimeout(function () {
-        $("body").addClass("loaded");
-      }, random);
-    });
+	<!--All the script stuff-->
+	<script src="scripts/scipt.js"></script>
+	<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script id="rendered-js">
+		var random = Math.floor(Math.random() * 2000) + 2000;
+		$(document).ready(function () {
+			setTimeout(function () {
+				$("body").addClass("loaded");
+			}, random);
+		});
 
-    var i = 0;
-    var txt = "Put your music taste and mood on the same wavelength";
-    var speed = 50;
+		var i = 0;
+		var txt = "Put your music taste and mood on the same wavelength";
+		var speed = 50;
 
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("demo").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-  </script>
+		function typeWriter() {
+			if (i < txt.length) {
+				document.getElementById("demo").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			}
+		}
+	</script>
 </html>

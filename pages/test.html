@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>Personify</title>
+
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../styles/vars.css" />
+		<link rel="stylesheet" href="../styles/home.css" />
+
+		<!-- Scripts -->
+		<script type="text/javascript" src="../scripts/test.js"></script>
+		<script type="text/javascript" src="../scripts/apiCalls.js"></script>
+	</head>
+
+	<body onload="onPageLoad()">
+		<!-- <div style="float: left; width: 300px">
+      <input
+        type="text"
+        id="artistsInput"
+        placeholder="Enter your favorite artists separated by commas"
+      />
+    </div> -->
+		<div class="container">
+			<div class="item-container">
+				<label for="mood">Enter your mood between 0 - 100</label><br />
+				<input
+					class="item"
+					type="text"
+					id="mood"
+					name="mood"
+					pattern="[0-9]+"
+					min="0"
+					max="100"
+					required
+				/>
+			</div>
+
+			<div class="item-container">
+				<label for="genres">Select a genre</label><br />
+				<select class="item" id="genres" name="genres">
+					<option value="pop">Pop</option>
+					<option value="rap">Rap</option>
+					<option value="rock">Rock</option>
+					<option value="hip-hop">Hip Hop</option>
+					<option value="jazz">Jazz</option>
+					<option value="country">country</option>
+					<option value="metal">metal</option>
+					<option value="R&B">R&B</option>
+					<option value="edm">EDM</option>
+				</select>
+			</div>
+
+			<div class="item-container">
+				<label for="artist"
+					>Enter your favorite artists separated by commas</label
+				><br />
+				<input
+					class="item"
+					type="text"
+					id="artistsInput"
+					name="artist"
+					placeholder="Ex: Post Malone, NF"
+				/>
+			</div>
+		</div>
+
+		<div class="buttons">
+			<button id="submit-btn" onclick="callApis()">Get Playlist</button>
+
+			<button id="auth-btn" onclick="requestAuthorization()">Get Auth</button>
+		</div>
+
+		<div>
+			<div id="playlist-container"></div>
+		</div>
+	</body>
+</html>

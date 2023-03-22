@@ -8,18 +8,11 @@
 		<link rel="stylesheet" href="../styles/home.css" />
 
 		<!-- Scripts -->
-		<script type="text/javascript" src="../scripts/test.js"></script>
+		<script type="text/javascript" src="../scripts/authentication.js"></script>
 		<script type="text/javascript" src="../scripts/apiCalls.js"></script>
 	</head>
 
 	<body onload="onPageLoad()">
-		<!-- <div style="float: left; width: 300px">
-      <input
-        type="text"
-        id="artistsInput"
-        placeholder="Enter your favorite artists separated by commas"
-      />
-    </div> -->
 		<div class="container">
 			<div class="item-container">
 				<label for="mood">Enter your mood between 0 - 100</label><br />
@@ -65,9 +58,9 @@
 		</div>
 
 		<div class="buttons">
-			<button id="submit-btn" onclick="callApis()">Get Playlist</button>
+			<button id="submit-btn" onclick="runApis()">Get Playlist</button>
 
-			<button id="auth-btn" onclick="requestAuthorization()">Get Auth</button>
+			<!-- <button id="auth-btn" onclick="requestAuthorization()">Get Auth</button> -->
 		</div>
 
 		<div>

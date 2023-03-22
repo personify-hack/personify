@@ -1,7 +1,7 @@
-var redirect_uri = "http://127.0.0.1:5500/pages/test.html";
+var redirect_uri = "http://127.0.0.1:5500/pages/personify.html";
 
 var CLIENT_ID = "13aca85cd9ab47c4bb0dde8481173e87";
-var CLIENT_SECRET = "b90f3294ac6f4f5e8b7123bdc02d622d"; // In a real app you should not expose your client_secret to the user
+var CLIENT_SECRET = "b90f3294ac6f4f5e8b7123bdc02d622d";
 
 var access_token = null;
 var refresh_token = null;
@@ -88,17 +88,9 @@ function handleAuthorizationResponse() {
 			localStorage.setItem("refresh_token", refresh_token);
 		}
 		onPageLoad();
+		runApis();
 	} else {
 		console.log(this.responseText);
 		alert(this.responseText);
 	}
-}
-
-function callApi(method, url, body, callback) {
-	let xhr = new XMLHttpRequest();
-	xhr.open(method, url, true);
-	xhr.setRequestHeader("Content-Type", "application/json");
-	xhr.setRequestHeader("Authorization", "Bearer " + access_token);
-	xhr.send(body);
-	xhr.onload = callback;
 }
